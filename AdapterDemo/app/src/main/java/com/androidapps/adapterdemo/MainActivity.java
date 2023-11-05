@@ -23,12 +23,14 @@ public class MainActivity extends AppCompatActivity {
         String[] countries = {"USA", "UK", "Australia", "India"};
 
         // Adapter
-        ArrayAdapter<String> adapter  = new ArrayAdapter<>(
-                this,
-                android.R.layout.simple_list_item_1,
-                countries
-        );
+//        ArrayAdapter<String> adapter  = new ArrayAdapter<>(
+//                this,
+//                android.R.layout.simple_list_item_1,
+//                countries
+//        );
 
+        //Custom Adapter
+        MyBaseAdpter adapter = new MyBaseAdpter(this, countries);
         listView.setAdapter(adapter);
     }
 }
